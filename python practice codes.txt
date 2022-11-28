@@ -1,0 +1,171 @@
+1. print("Twinkle, twinkle, little star, \n\tHow I wonder what you are!
+ \n\t\tUp above the world so high, \n\t\tLike a diamond in the sky. 
+\nTwinkle, twinkle, little star, \n\tHow I wonder what you are")
+
+2.from math import pi
+r = float(input("input radius of circle: "))
+print("the area of the circle with a radius of " + str(r) + " is: " + str(pi*r**2))
+
+3.fname = (input("Enter first name: "))
+lname = (input("Enter last name: "))
+print("Hello " + lname + "," + " " + fname)
+
+4.values = input("Input some comma seprated numbers : ")
+list = values.split(",")
+tuple = tuple(list)
+print('List : ',list)
+print('Tuple : ',tuple)
+
+5.color_list = ["Red","Green","White" ,"Black"]
+print( "%s %s"%(color_list[0],color_list[-1]))
+
+6.count = 0
+for number in range (1,10):
+    if number % 2==0:
+        count+=1
+        print(number)
+print(f"we have {count} even numbers")
+
+7.num1 = float(10)
+num2 = float(2)
+add = num1 + num2
+sub = num1 - num2
+multi = num1 * num2
+div = num1 / num2
+
+print(num1)
+print(num2)
+print("Addition = " + str(add))
+print("Subtraction = " + str(sub))
+print("Multiplication = " + str(multi))
+print("Division = " + str(div))
+
+8.num1 = int(input('enter number: '))
+square = 0
+
+square = num1**(1/2)
+print('number: ' + str(num1))
+print('square root: ' + str(square))
+
+9.num1 = int(input('enter 1st number: '))
+num2 = int(input('enter 2nd number: '))
+swap = num2
+
+print('before swap: ')
+print(str(num1) + '\n' + str(num2))
+
+print('after swap')
+print(str(swap) + '\n' + str(num1))
+
+10.i = 1
+while i < 8:
+ print('hello')
+ i += 1
+
+11.import random
+num1 = random.randint(0,100)
+num2 = random.randint(0,100)
+num3 = random.randint(0,100)
+
+print('random number = ' + str(num1))
+print('random number = ' + str(num2))
+print('random number = ' + str(num3))
+
+12. num = int(input('enter number: '))
+if num % 2 == 0:
+    print(str(num) + ' is even')
+else:
+    print(str(num) + ' is odd')
+
+13.list1 = [14, 54, 99, 78, 32]
+print(list1)
+print('largest number in the list is ', max(list1))
+
+14.num = int(input('enter a number: '))
+if num > 1:
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is NOT a prime number")
+           break
+   else:
+       print(num,"is a prime number")
+else:
+   print(num,"is NOT a prime number")
+
+15.a = 'hello this is a message'
+b = 'Water Bottle'
+c = f'hi, {a} {b}'
+print(a.upper())
+print(b.lower())
+print(a + " " + b)
+print(c)
+print('Something:\n\tOne\n\tTwo\n\tThree')
+
+16. things = ['chair', 'table', 'bag', 'pencil', 'phone']
+len(things)
+for thing in things:
+    print(f'{thing.title()}, very nice')
+print(things[-1])
+things.reverse()
+print(things)
+
+17. numbers = list(range(1, 11))
+print(numbers)
+
+odd_numbers = list(range(1, 11, 2))
+print(odd_numbers)
+
+squares = []
+for value in range(1,11):
+    square = value**2
+    squares.append(square)
+print(squares)
+
+18.thislist = [1, 'one', 2.3, 'car', 74, 'pencil', 'bike']
+print(thislist) #list
+thislist.insert(1, 'xjdkajsfea') #inserts at index 1
+print(thislist)
+thislist.remove('one') #removes the string 'one'
+print(thislist)
+thislist.pop(3) #removes the element at index 3
+print(thislist)
+
+19. thistuple = ('one', 'paper', 'bote', 1, 5, 7.3, 0.4)
+print(thistuple) #tuple
+
+x = list(thistuple) #converts the tuple into a list to modify its elements
+x.remove('paper') #removes paper from the list
+x.insert(5, 'calcu') #inserts 'calcu' at index 5
+x.append(24) #inserts number 24 as the last element in the list
+print (x)
+print(type(x)) #list
+
+y = tuple(x) #converts from list to tuple with the new/modified elements
+print(type(y)) #tuple
+print(y) 
+
+20. oneset = {1, 'table', 34, 'pencil', 'eraser', 'shirt'}
+print(oneset) #dictionary
+
+oneset.remove(1) #same as list but doesnt duplicate
+print(oneset)
+
+21. thisdict = {'laptop' : 'acer', 1 : 3, 75 : 0}
+print(thisdict) #dictionary 
+
+thisdict ['laptop'] = 'lenovo' #replaces 'acer' with 'lenovo'
+thisdict [1] = '89' #replaces 3 with 89
+print(thisdict)
+
+22. x = lambda a : a*5 #lambda
+print(x(5))
+
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
+
+sum = lambda a,b,c : a + b * c
+print (sum(1, 2, 5))
